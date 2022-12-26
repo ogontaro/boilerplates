@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "fmt": "deno fmt main.ts ./src"
+  },
+  "compilerOptions": {
+    "strict": true
+  },
+  "importMap": "./import_map.json"
+}

@@ -1,0 +1,13 @@
+fix: true
+parallel: true
+format: progress
+ruby_version: 2.7.6
+default_ignores: false
+ignore:
+  - db/schema.rb
+  - config/puma.rb
+  - lib/crawler_client.rb
+  - crawl_site.rb:
+      - Security/Eval
+  - config/initializers/factory_bot.rb:
+      - Style/MixinUsage
