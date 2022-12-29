@@ -1,4 +1,4 @@
-FROM rust:1.65 AS base
+FROM rust:1.66 AS base
 ENV LANG="C.UTF-8" \
     TZ="Asia/Tokyo"
 RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
@@ -7,7 +7,7 @@ WORKDIR ${APP_HOME}
 COPY Cargo.* ./
 
 
-FROM base AS dev
+FROM base AS workspace
 COPY Cargo.* ./
 RUN mkdir src
 RUN echo "fn main(){}" > src/main.rs

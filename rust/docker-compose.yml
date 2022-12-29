@@ -1,14 +1,14 @@
 version: "3.7"
 
 services:
-  dev:
+  workspace:
     build:
       dockerfile: container/Dockerfile
       context: ./
-      target: base
-    command:
-      - tail
-      - -f
-      - /dev/null
+      target: workspace
+    command: [ tail, -f, /dev/null ]
     volumes:
-      - ./src:/workspace/src:cached
+      - ./src:/workspace/src:delegated
+      - ./Cargo.toml:/workspace/Cargo.toml:delegated
+      - ./Cargo.lock:/workspace/Cargo.lock:delegated
+

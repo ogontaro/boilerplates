@@ -1,7 +1,7 @@
 {
   "name": "Rust Development",
   "dockerComposeFile": "../docker-compose.yml",
-  "service": "dev",
+  "service": "workspace",
   "workspaceFolder": "/workspace",
   "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
   "customizations": {
